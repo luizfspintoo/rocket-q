@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --red: #E83F5B;
+    --lightBlue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #FBFCFF;
+    --overlay: #040911;
+    --iconDetails: #A5B0C1;
+    --grayDark: #4D5E77; 
+    --grayBlue: #A1B2CD;
+    --grayMedium: #D3D9E2;
+    --grayLight: #E5EAF1;
+
+    /*hover*/
+    --hoverBlue: #5699FF;
+    --hoverRed: #EA4B65;
+    --hoverGray: #8794A7;
+
+    /*1rem = 16px (user agent browser*/
+}
