@@ -1,0 +1,127 @@
+#room header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#room header .buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 3.5rem 7rem;
+}
+
+#room header .buttons img {
+    width: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Questões */
+#question-form {
+    margin-top: 6.4rem;
+}
+
+#question-form form {
+    width: 100%;
+    background-color: transparent;
+    border: 0.2rem solid var(--grayBlue);
+    padding: 1.3rem 1.6rem 1rem 1.6rem;
+    border-radius: 0.8rem;
+}
+
+#question-form textarea {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    resize: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+#question-form textarea::placeholder {
+    color: var(--grayBlue);
+}
+
+#question-form footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#question-form footer div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: .1rem;
+    color: var(--iconDetails);
+    font-size: 1.4rem;
+}
+
+#question-form footer button {
+    padding: 2rem;
+}
+
+#questions-section {
+    padding: 1rem 0px;
+}
+
+.question-wrapper {
+    width: 100%;
+    padding: 2.4rem;
+    background-color: var(--lightBlue);
+    margin: 1rem 0;
+    border-radius: 0.8rem;
+}
+
+/* Estilo da pergunta e avatar */
+.question-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.avatar {
+    background-color: var(--blue);
+    padding: 1.4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Ações e visualizar pergunta e excluir */
+.actions {
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+    align-items: center;
+}
+
+.actions a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--grayDark);
+}
+
+.actions img {
+    width: 2rem;
+}
+
+/* Questões lidas */
+.read {
+    background-color: var(--grayRead);
+}
+
+.read-avatar {
+    background-color: var(--grayMedium);
+}
+

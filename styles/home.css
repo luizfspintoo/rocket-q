@@ -31,13 +31,6 @@ main .container {
     max-width: 36.3rem; /* tamanho minimo que pode ter o formulario */
 }
 
-main h2 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: clamp(20px, 5vw, 2.8rem);
-    color: var(--black);
-    margin-bottom: 2.4rem;
-}
 
 main input {
     padding: 1.3rem 1.6rem;

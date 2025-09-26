@@ -18,6 +18,7 @@ html {
     --grayBlue: #A1B2CD;
     --grayMedium: #D3D9E2;
     --grayLight: #E5EAF1;
+    --grayRead: #EAECF1;
 
     /* hover */
     --hoverBlue: #5699FF;
@@ -44,6 +45,11 @@ body, button, input, textarea {
     width: 100%;
 }
 
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
 /* Acessibilidade label */
 .sr-only {
     position: absolute;
@@ -55,6 +61,14 @@ body, button, input, textarea {
     clip-path: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+main h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 5vw, 2.8rem);
+    color: var(--black);
+    margin-bottom: 2.4rem;
 }
 
 /* estilo global para botão e input */
@@ -75,7 +89,7 @@ button, .button {
     background-color: var(--blue);
     color: var(--white);
     cursor: pointer;
-    transition: filter .2s;
+    transition: filter .1s;
 }
 
 .button-create-room {
