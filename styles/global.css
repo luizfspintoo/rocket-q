@@ -19,10 +19,85 @@ html {
     --grayMedium: #D3D9E2;
     --grayLight: #E5EAF1;
 
-    /*hover*/
+    /* hover */
     --hoverBlue: #5699FF;
     --hoverRed: #EA4B65;
     --hoverGray: #8794A7;
 
-    /*1rem = 16px (user agent browser*/
+    font-size: 62.5%; /* 10px */
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+/* Segue um intervalo, tela muito menor 14px, tela muito grande 2vw */
+body, button, input, textarea {
+    font-size: clamp(14px, 1.6rem, 2vw);
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Acessibilidade label */
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* estilo global para botão e input */
+button, input, .button {
+    padding: 1.3rem 1.6rem;
+    border-radius: 0.8rem;
+}
+
+button, .button {
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    transition: filter .2s;
+}
+
+.button-create-room {
+    background-color: transparent;
+    border: 0.2rem solid var(--blue);
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+}
+
+
+button:hover, .button:hover {
+    filter: brightness(1.2);
+}
+
+/* estilo do header */
+.content header {
+    width: 80%;
+}
+
+/* estilo do logo */
+.content header img {
+    width: 16.7rem;
+    margin: 3.5rem 7rem;
 }

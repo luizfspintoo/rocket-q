@@ -1,0 +1,91 @@
+.content {
+    display: grid;
+    /* tamanho das colunas na grid, somando tem que da 100% */
+    grid-template-columns: 60% 40%; 
+    /* tamanho de cada linha na grid */
+    grid-template-rows: 11.4rem 1fr; 
+
+    /* areas da grid */
+    grid-template-areas: 
+    "header header"
+    "left right";
+}
+
+header {
+    grid-area: header;
+}
+
+#bg {
+    grid-area: left;
+    background: url("/assets/home-bg-image.svg") no-repeat top/contain;
+    background-position: -7rem;
+}
+
+main {
+    grid-area: right;
+    display: flex;
+    align-items: center;
+}
+
+main .container {
+    max-width: 36.3rem; /* tamanho minimo que pode ter o formulario */
+}
+
+main h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 5vw, 2.8rem);
+    color: var(--black);
+    margin-bottom: 2.4rem;
+}
+
+main input {
+    padding: 1.3rem 1.6rem;
+    border: 0.2rem solid var(--grayBlue);
+}
+
+input, button, .button {
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+/* separação linha */
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    color: var(--grayBlue);
+    margin: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+}
+
+.separator div:nth-child(1), .separator div:nth-child(3)  {
+    height: 1px;
+    width: 100%;
+    background-color: var(--grayBlue);
+}
+
+/* figuras geométricas ciculo */
+.ball-top {
+    position: fixed;
+    top: -1rem;
+    right: -1rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--blue);
+    clip-path: circle(70% at 100% 1%);
+    opacity: 0.1;
+}
+
+.ball-bottom {
+    position: fixed;
+    bottom: -4rem;
+    right: 2rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--blue);
+    clip-path: circle(49% at 50% 100%);
+    opacity: 0.1;
+}
