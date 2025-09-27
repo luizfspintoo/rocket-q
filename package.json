@@ -1,0 +1,20 @@
+{
+  "name": "rocket-q",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para criação de perguntas anonimas, para administrador da sala",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luiz Felipe",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

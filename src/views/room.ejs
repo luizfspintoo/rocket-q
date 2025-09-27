@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/room.css" />
     <link rel="stylesheet" href="styles/modal.css" />
+
+    <!-- scripts js -->
+    <script src="scripts/main.js" defer type="module" ></script>
+
+
     <!-- Fonts Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,16 +30,16 @@
     <div id="room" class="content">
         <header>
             <a href="home.html">
-                <img src="assets/logo.svg" alt="Rocket-Q logo" />
+                <img src="images/logo.svg" alt="Rocket-Q logo" />
             </a>
 
             <div class="buttons">
                 <div class="button button-create-room">
                     #123456
-                    <img src="assets/copy.svg" alt="Icone de copiar conteudo" />
+                    <img src="images/copy.svg" alt="Icone de copiar conteudo" />
                 </div>
                 <a href="#" class="button">
-                    <img src="assets/users-pass.svg" alt="Icone de users" />
+                    <img src="images/users-pass.svg" alt="Icone de users" />
                     Criar sala
                 </a>
             </div>
@@ -49,7 +54,7 @@
     
                         <footer>
                             <div>
-                                <img src="assets/lock.svg" alt="Icone de cadeado" />
+                                <img src="images/lock.svg" alt="Icone de cadeado" />
                                 Está pergunta é anônima
                             </div>
                             <button class="button">Enviar</button>
@@ -62,7 +67,7 @@
                     <div class="question-wrapper read">
                         <div class="question-content">
                             <div class="avatar read-avatar">
-                                <img src="assets/user-avatar.svg" alt="Icone de avatar">
+                                <img src="images/user-avatar.svg" alt="Icone de avatar">
                             </div>
                             <p>
                                 Lorem Ipsum é um texto fictício usado para preencher espaços em projetos de design e impressão. Saiba mais sobre sua origem, significado e como gerar Lorem Ipsum online.kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
@@ -70,43 +75,26 @@
                         </div>
                         <div class="actions">
                             <a href="#">
-                                <img src="assets/trash.svg" alt="Icone de deletar">
+                                <img src="images/trash.svg" alt="Icone de deletar">
                                 Excluir
                             </a>
                         </div>
                     </div>
+
                     <div class="question-wrapper">
                         <div class="question-content">
                             <div class="avatar">
-                                <img src="assets/user-avatar.svg" alt="Icone de avatar">
-                            </div>
-                            Qual a linguagem de programação mais utilizada no mundo todo, Python ou JavaScript?
-                        </div>
-                        <div class="actions">
-                            <a href="#">
-                                <img src="assets/check.svg" alt="Icone de check">
-                                Marcar como lida
-                            </a>
-                            <a href="#">
-                                <img src="assets/trash.svg" alt="Icone de deletar">
-                                Excluir
-                            </a>
-                        </div>
-                    </div>
-                    <div class="question-wrapper">
-                        <div class="question-content">
-                            <div class="avatar">
-                                <img src="assets/user-avatar.svg" alt="Icone de avatar">
+                                <img src="images/user-avatar.svg" alt="Icone de avatar">
                             </div>
                             Estou com muita dificuldade de entender como IA funciona, você recomenda algum livro, video ou tutorial para eu aprender?
                         </div>
                         <div class="actions">
-                            <a href="#">
-                                <img src="assets/check.svg" alt="Icone de check">
+                            <a href="#" class="check">
+                                <img src="images/check.svg" alt="Icone de check">
                                 Marcar como lida
                             </a>
-                            <a href="#">
-                                <img src="assets/trash.svg" alt="Icone de deletar">
+                            <a href="#" class="delete">
+                                <img src="images/trash.svg" alt="Icone de deletar">
                                 Excluir
                             </a>
                         </div>
@@ -120,12 +108,12 @@
             <div class="modal">
                 <h3>Excluir pergunta</h3>
                 <p>Tem certeza que você deseja excluir essa pergunta?</p>
-                <form>
+                <form action=""> 
                     <label for="password" class="sr-only">Digite sua senha</label>
                     <input type="password" id="password" name="password" placeholder="Digite sua senha">
                     <div class="buttons">
-                        <button class="gray">Cancelar</button>
-                        <button class="red">Sim, excluir</button>
+                        <a href="#" class="gray cancel">Cancelar</a>
+                        <button type="submit" class="red">Sim, excluir</button>
                     </div>
                 </form>
             </div>
