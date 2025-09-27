@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Sala - Rocket-Q</title>
     <!-- Importação de estilos CSS -->
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
     <!-- Fonts Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,9 @@
 <body>
     <div id="home" class="content">
         <header>
-            <img src="images/logo.svg" alt="Rocket-Q logo" />
+            <a href="/">
+                <img src="/images/logo.svg" alt="Rocket-Q logo" />
+            </a>
         </header>
         <div id="bg">
             <div class="ball-top"></div>
@@ -31,29 +33,8 @@
         </div>
         <main>
             <div class="container">
-                <section>
-                    <h2>Entre como participante</h2>
-                    <form>
-                        <label class="sr-only" for="room-id">Código da sala</label>
-                        <input type="number" id="room-id" placeholder="Código da sala">
-                        <button>
-                            <img src="images/enter-room.svg" alt="Icone de entrar" />
-                            Entrar na sala
-                        </button>
-                    </form>
-                </section>
-                <div class="separator">
-                    <div></div>
-                    <div>ou</div>
-                    <div></div>
-                </div>
-                <section>
-                    <h2>Crie sua própria sala, de forma facíl</h2>
-                    <a href="/create-room.html" class="button button-create-room">
-                        <img src="images/users.svg" alt="Icone usuarios" />
-                        Criar sala
-                    </a>
-                </section>
+               <!-- aqui vai renderizar a pagina conforme o partials -->
+                <%- include(`partials/${page}`) %>
             </div>
         </main>
     </div>
