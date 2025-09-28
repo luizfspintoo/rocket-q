@@ -33,10 +33,24 @@ function hadleModal(event, check) {
     //pegando dados do formulario
     const roomId = document.querySelector("#room-id").dataset.id;
     const slug = check ? "check" : "delete";
-    const questionId = event.target.dataset.id;
+
+    //pega em todos, img, a, ou text desse elemento.
+    const questionId = event.target.closest("[data-id]")?.dataset.id; 
+
 
     const form = document.querySelector(".modal form");
     form.setAttribute("action", `/questions/${roomId}/${questionId}/${slug}`);
 
     modal.open();
 }
+
+
+//Ação para copiar o código da sala no botão
+const codeElement = document.querySelector("#room-id");
+
+codeElement.addEventListener("click", () => {
+    const code = codeElement.innerText;
+    navigator.clipboard.writeText(code)
+});
+
+

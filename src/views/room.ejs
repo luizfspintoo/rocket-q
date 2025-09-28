@@ -34,13 +34,13 @@
             </a>
 
             <div class="buttons">
-                <div class="button button-create-room" id="room-id" data-id="123456">
-                    #123456
+                <div class="button button-create-room" id="room-id" data-id="<%= roomId %>">
+                    <%= roomId %>
                     <img src="/images/copy.svg" alt="Icone de copiar conteudo" />
                 </div>
-                <a href="#" class="button">
+                <a href="/create-pass" class="button">
                     <img src="/images/users-pass.svg" alt="Icone de users" />
-                    Criar sala
+                    Criar nova sala
                 </a>
             </div>
         </header>
@@ -48,77 +48,74 @@
             <div class="container">
                 <section id="question-form">
                     <h2>Faça a sua pergunta</h2>
-                    <form>
+                    <form action="/create-question" method="post">
                         <label for="question" class="sr-only">O que você quer perguntar</label>
-                        <textarea name="question" id="question" placeholder="O que você quer perguntar?" rows="4"></textarea>
+                        <input type="hidden" name="room" id="room" value="<%= roomId %>">
+                        <textarea name="question" id="question" placeholder="O que você quer perguntar?" rows="3" required maxlength="255"></textarea>
     
                         <footer>
                             <div>
                                 <img src="/images/lock.svg" alt="Icone de cadeado" />
                                 Está pergunta é anônima
                             </div>
-                            <button class="button">Enviar</button>
+                            <button type="submit" class="button">Enviar</button>
                         </footer>
                     </form>
                 </section>
 
                 <section id="questions-section">
                     <h2 class="sr-only">Perguntas da comunidade</h2>
+
+                    <% if(isNotQuestion) { %>
+                        <%- include(`partials/notquestions`) %>
+                    <% } %>
                    
-                    <div class="question-wrapper">
-                        <div class="question-content">
-                            <div class="avatar">
-                                <img src="/images/user-avatar.svg" alt="Icone de avatar">
-                            </div>
-                            Estou com muita dificuldade de entender como IA funciona, você recomenda algum livro, video ou tutorial para eu aprender?
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="check" data-id="3">
-                                <img src="/images/check.svg" alt="Icone de check">
-                                Marcar como lida
-                            </a>
-                            <a href="#" class="delete" data-id="3">
-                                <img src="/images/trash.svg" alt="Icone de deletar">
-                                Excluir
-                            </a>
-                        </div>
-                    </div>
+                    <% questions.forEach(question => { %>
 
                     <div class="question-wrapper">
                         <div class="question-content">
                             <div class="avatar">
                                 <img src="/images/user-avatar.svg" alt="Icone de avatar">
                             </div>
-                            Estou com muita dificuldade de entender como IA funciona, você recomenda algum livro, video ou tutorial para eu aprender?
+                            <p>
+                                <%= question.title %>
+                            </p>
                         </div>
                         <div class="actions">
-                            <a href="#" class="check" data-id="2">
+                            <a href="#" class="check" data-id="<%= question.id %>">
                                 <img src="/images/check.svg" alt="Icone de check">
                                 Marcar como lida
                             </a>
-                            <a href="#" class="delete" data-id="2">
+                            <a href="#" class="delete" data-id="<%= question.id %>">
                                 <img src="/images/trash.svg" alt="Icone de deletar">
                                 Excluir
                             </a>
                         </div>
                     </div>
 
+                     <% }) %>
+
+                    <!-- Perguntas lidas -->
+                    
+                    <% questionsRead.forEach(question => { %>
                      <div class="question-wrapper read">
                         <div class="question-content">
                             <div class="avatar read-avatar">
                                 <img src="/images/user-avatar.svg" alt="Icone de avatar">
                             </div>
                             <p>
-                                Lorem Ipsum é um texto fictício usado para preencher espaços em projetos de design e impressão. Saiba mais sobre su
+                                <%= question.title %>
                             </p>
                         </div>
                         <div class="actions">
-                            <a href="#">
+                            <a href="#" class="delete" data-id="<%= question.id %>">
                                 <img src="/images/trash.svg" alt="Icone de deletar">
                                 Excluir
                             </a>
                         </div>
-                    </div>
+                    </div> 
+                     <% }) %>
+
                 </section>
             </div>
         </main>

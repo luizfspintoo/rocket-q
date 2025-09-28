@@ -125,3 +125,23 @@
     background-color: var(--grayMedium);
 }
 
+.question-message {
+    padding: 5.2rem 0;
+    text-align: center;
+    margin: 0 auto;
+    width: min(30rem, 90%);
+}
+
+.question-message h3 {
+    font-size: 2rem;
+    color: var(--black);
+    font-family: "Poppins", sans-serif;
+    margin: 1.2rem 0;
+}
+
+.question-message p {
+    color: var(--grayDark);
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
