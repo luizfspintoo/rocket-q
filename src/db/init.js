@@ -6,6 +6,7 @@ const initDb = {
 
         await db.exec(`CREATE TABLE rooms (
                 id INTEGER PRIMARY KEY,
+                name VARCHAR(255),
                 pass TEXT
             );`);
 

@@ -30,6 +30,12 @@ module.exports = {
         const question = req.body.question;
         const roomId = req.body.room;
 
+        const roomVerify = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`);
+
+        if(! roomVerify) {
+            return res.redirect(`/room/${roomId}`);
+        }
+        
         await db.run(`INSERT INTO questions(title, read, room) VALUES("${question}", 0, ${roomId})`);
 
        await db.close();

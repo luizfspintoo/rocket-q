@@ -1,6 +1,8 @@
 <section>
     <h2>Crie sua própria sala</h2>
     <form action="/create-room" method="post">
+        <label class="sr-only" for="name">Nome da sala</label>
+        <input type="text" id="name" name="name" placeholder="Informe um nome para sala" required>
         <label class="sr-only" for="room-id">Código da sala</label>
         <input type="password" id="room-id" name="password" placeholder="Insira uma senha" required>
         <button type="submit">

@@ -6,6 +6,7 @@ module.exports = {
         const db = await Database();
 
         let roomId = "";
+        let name = req.body.name;
         let pass = req.body.password;
         let isRoom = true;
 
@@ -18,7 +19,7 @@ module.exports = {
             isRoom = allRooms.some(allRooms => allRooms == roomId);
 
             if (!isRoom) {
-                await db.run(`INSERT INTO rooms (id, pass) VALUES(${roomId}, ${pass})`);
+                await db.run(`INSERT INTO rooms (id, name, pass) VALUES(${roomId}, "${name}", ${pass})`);
             }
 
         }
@@ -34,11 +35,10 @@ module.exports = {
         const roomId = req.params.room;
         const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 0 ORDER BY id DESC`);
         const questionsRead = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 1 ORDER BY id DESC`);
-        const isNotQuestion = questions.length == 0 && questionsRead.length == 0 ? true : false;
+        const isNotQuestion = questions.length == 0 ? true : false;
 
         return res.render("room", { roomId: roomId, questions: questions, questionsRead: questionsRead, isNotQuestion: isNotQuestion });
     },
-
 
     async access(req, res) {
         const db = await Database();
@@ -46,13 +46,12 @@ module.exports = {
 
         const roomRes = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`);
 
-        await db.close();
-
         if (roomRes) {
             return res.redirect(`/room/${roomId}`);
         }
 
+        await db.close();
         return res.redirect(`/`);
-    }
 
+    }
 }
