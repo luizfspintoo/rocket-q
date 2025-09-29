@@ -5,6 +5,7 @@ const route = express.Router();
 const QuestionController = require("./controllers/QuestionController.js");
 const  RoomController = require("./controllers/RoomController.js");
 
+//rotas da aplicação
 route.get("/", (req, res)=> res.render("index", {page:"enter-room"}));
 route.get("/create-pass", (req, res)=> res.render("index", {page: "create-pass"}));
 
