@@ -3,7 +3,7 @@
 
 # Rocket.q
 
-Aplicativo web onde os usuários podem criar suas salas e compratilhar para outras pessoas acessarem e fazer perguntas anonimas.
+Aplicativo web onde os usuários podem criar suas salas e compartilhar para outras pessoas acessarem e fazerem perguntas anonimas.
 
 ---
 
@@ -15,18 +15,19 @@ Aplicativo web onde os usuários podem criar suas salas e compratilhar para outr
 
 ## 🚀 Funcionalidades
 
-- Criação de uma sala, colocando uma senha de ADM
-- Exclusão de uma pergunta
-- Marcar como lida a pergunta
-- Compratilhamento do código da sala
-- Acesso como visitante a uma sala, com código compratilhado pelo ADM.
+- Criação de uma sala, colocando um nome e senha
+- Criação de perguntas
+- Exclusão de uma pergunta, informando a senha
+- Marcar como lida a pergunta, informando a senha
+- Compartilhamento do código da sala
+- Acesso como visitante a uma sala, com código compratilhado pelo criador da sala
 
 ---
 
 ## 🧰 Tecnologias Utilizadas
 
 - **Node + Express.js**
-- **HTML5, CSS3, JavaScript**
+- **HTML5, CSS3, JavaScript, EJS**
 - **SQlite**
 
 ---
@@ -44,7 +45,7 @@ Aplicativo web onde os usuários podem criar suas salas e compratilhar para outr
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/luizfspintoo/rocketq.git
+git clone https://github.com/luizfspintoo/rocket-q.git
 cd rocket-q
 
 ```
