@@ -7,6 +7,13 @@
             <img src="images/enter-room.svg" alt="Icone de entrar" />
             Entrar na sala
         </button>
+        <% if (erro && erro.length> 0) { %>
+            <% erro.forEach(msg=> { %>
+                <div class="alert-danger">
+                    <%= msg %>
+                </div>
+            <% }) %>
+        <% } %>
     </form>
 </section>
 <div class="separator">

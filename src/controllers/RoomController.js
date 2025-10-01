@@ -51,7 +51,9 @@ module.exports = {
         }
 
         await db.close();
-        return res.redirect(`/`);
-
+        return res.render("index", {
+            page: "enter-room",
+            erro: ["Sala não encontrada para o código informado."]
+        });
     }
 }

@@ -6,7 +6,7 @@ const QuestionController = require("./controllers/QuestionController.js");
 const  RoomController = require("./controllers/RoomController.js");
 
 //rotas da aplicação
-route.get("/", (req, res)=> res.render("index", {page:"enter-room"}));
+route.get("/", (req, res)=> res.render("index", {page:"enter-room", erro: []}));
 route.get("/create-pass", (req, res)=> res.render("index", {page: "create-pass"}));
 
 route.post("/create-room", RoomController.store);
